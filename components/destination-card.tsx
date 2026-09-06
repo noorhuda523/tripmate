@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { MapPin, Star } from 'lucide-react'
+import Link from 'next/link'
+import { MapPin, ArrowRight } from 'lucide-react'
 import type { Destination } from '@/lib/data'
 import { Badge } from '@/components/ui/badge'
 
@@ -17,29 +18,21 @@ export function DestinationCard({ destination }: { destination: Destination }) {
         <Badge className="absolute left-3 top-3 rounded-full bg-background/90 px-3 py-1 text-xs font-medium text-foreground hover:bg-background/90">
           {destination.tag}
         </Badge>
-        <div className="absolute right-3 top-3 flex items-center gap-1 rounded-full bg-accent px-2.5 py-1 text-xs font-semibold text-accent-foreground">
-          <Star className="h-3.5 w-3.5 fill-current" />
-          {destination.rating}
-        </div>
       </div>
       <div className="p-5">
-        <div className="flex items-start justify-between gap-2">
-          <div>
-            <h3 className="font-display text-lg font-bold text-foreground">{destination.name}</h3>
-            <p className="mt-0.5 flex items-center gap-1 text-sm text-muted-foreground">
-              <MapPin className="h-3.5 w-3.5" />
-              {destination.country}
-            </p>
-          </div>
-        </div>
-        <div className="mt-4 flex items-end justify-between border-t border-border pt-4">
-          <div>
-            <p className="text-xs text-muted-foreground">From</p>
-            <p className="font-display text-lg font-bold text-foreground">
-              ${destination.priceFrom.toLocaleString()}
-            </p>
-          </div>
-          <p className="text-xs text-muted-foreground">{destination.reviews.toLocaleString()} reviews</p>
+        <h3 className="font-display text-lg font-bold text-foreground">{destination.name}</h3>
+        <p className="mt-0.5 flex items-center gap-1 text-sm text-muted-foreground">
+          <MapPin className="h-3.5 w-3.5" />
+          {destination.country}
+        </p>
+        <div className="mt-4 border-t border-border pt-4">
+          <Link
+            href={`/planner?destination=${encodeURIComponent(`${destination.name}, ${destination.country}`)}`}
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+          >
+            Plan a trip
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+          </Link>
         </div>
       </div>
     </article>

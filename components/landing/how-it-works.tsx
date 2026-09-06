@@ -1,4 +1,4 @@
-import { MessageSquareText, Route, Plane } from 'lucide-react'
+import { MessageSquareText, Route, BookmarkCheck } from 'lucide-react'
 
 const steps = [
   {
@@ -14,10 +14,10 @@ const steps = [
       'Our AI builds a day-by-day plan with activities, maps, weather, and a clear budget.',
   },
   {
-    icon: Plane,
-    title: 'Book and go',
+    icon: BookmarkCheck,
+    title: 'Review & Save',
     detail:
-      'Fine-tune anything, save it to My Trips, and set off on a journey made just for you.',
+      'Review your personalized plan, fine-tune any day, and save it to My Trips to revisit anytime.',
   },
 ]
 

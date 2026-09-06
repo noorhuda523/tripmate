@@ -3,9 +3,6 @@ export type Destination = {
   name: string
   country: string
   image: string
-  rating: number
-  reviews: number
-  priceFrom: number
   tag: string
 }
 
@@ -15,9 +12,6 @@ export const destinations: Destination[] = [
     name: 'Bali',
     country: 'Indonesia',
     image: '/images/dest-bali.png',
-    rating: 4.9,
-    reviews: 1280,
-    priceFrom: 1240,
     tag: 'Tropical',
   },
   {
@@ -25,9 +19,6 @@ export const destinations: Destination[] = [
     name: 'Santorini',
     country: 'Greece',
     image: '/images/dest-santorini.png',
-    rating: 4.8,
-    reviews: 964,
-    priceFrom: 1680,
     tag: 'Island',
   },
   {
@@ -35,9 +26,6 @@ export const destinations: Destination[] = [
     name: 'Kyoto',
     country: 'Japan',
     image: '/images/dest-kyoto.png',
-    rating: 4.9,
-    reviews: 1520,
-    priceFrom: 1990,
     tag: 'Culture',
   },
   {
@@ -45,9 +33,6 @@ export const destinations: Destination[] = [
     name: 'Swiss Alps',
     country: 'Switzerland',
     image: '/images/dest-alps.png',
-    rating: 4.7,
-    reviews: 742,
-    priceFrom: 2250,
     tag: 'Mountains',
   },
   {
@@ -55,9 +40,6 @@ export const destinations: Destination[] = [
     name: 'Amalfi Coast',
     country: 'Italy',
     image: '/images/dest-amalfi.png',
-    rating: 4.8,
-    reviews: 880,
-    priceFrom: 1870,
     tag: 'Coastal',
   },
   {
@@ -65,9 +47,6 @@ export const destinations: Destination[] = [
     name: 'Tokyo',
     country: 'Japan',
     image: '/images/dest-tokyo.png',
-    rating: 4.9,
-    reviews: 2040,
-    priceFrom: 2100,
     tag: 'City',
   },
 ]
