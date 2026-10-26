@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import Link from 'next/link'
-import { MapPin, Search, Sparkles, Star } from 'lucide-react'
+import { MapPin, Search, Sparkles, Star, Play } from 'lucide-react'
+import { GlobeScene } from '@/components/landing/globe-scene'
 import { Button } from '@/components/ui/button'
 
 export function Hero() {
@@ -59,15 +59,23 @@ export function Hero() {
         </div>
 
         <div className="relative">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-border shadow-2xl sm:aspect-[5/5]">
-            <Image
-              src="/images/hero-coast.png"
-              alt="Aerial view of a dramatic tropical coastline at golden hour"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-border bg-primary shadow-2xl sm:aspect-[5/5]">
+            <video
+              className="absolute inset-0 h-full w-full object-cover opacity-80"
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/images/hero-coast.png"
+              aria-label="Aerial travel footage over a tropical coastline"
+            >
+              <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/75 via-primary/10 to-transparent" />
+            <GlobeScene />
+            <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/20 bg-primary/80 px-3 py-2 text-xs font-semibold text-primary-foreground backdrop-blur-sm">
+              <Play className="h-3.5 w-3.5 fill-current" /> Live travel preview
+            </div>
           </div>
 
           <div className="absolute bottom-5 left-5 flex items-center gap-3 rounded-2xl border border-border bg-background/95 p-3 pr-5 shadow-xl backdrop-blur-sm">
