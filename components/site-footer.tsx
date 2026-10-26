@@ -9,6 +9,15 @@ const footerColumns = [
       { label: 'AI Itinerary', href: '/itinerary' },
       { label: 'Interactive Maps', href: '/itinerary' },
       { label: 'My Trips', href: '/trips' },
+      { label: 'Booking demo', href: '/bookings' },
+    ],
+  },
+  {
+    title: 'Account',
+    links: [
+      { label: 'Pricing', href: '/pricing' },
+      { label: 'Sign in', href: '/auth' },
+      { label: 'Profile', href: '/profile' },
     ],
   },
 ]

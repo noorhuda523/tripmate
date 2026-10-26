@@ -4,13 +4,14 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Compass, Menu, X } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import { ThemeToggle } from '@/components/theme-toggle'
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/#destinations', label: 'Explore' },
+  { href: '/explore', label: 'Explore' },
   { href: '/planner', label: 'Planner' },
+  { href: '/bookings', label: 'Book demo' },
   { href: '/trips', label: 'My Trips' },
 ]
 
@@ -52,12 +53,9 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
-          <Button variant="ghost" className="rounded-full font-medium">
-            Login
-          </Button>
-          <Button asChild className="rounded-full font-semibold">
-            <Link href="/planner">Start Planning</Link>
-          </Button>
+          <ThemeToggle />
+          <Link href="/auth" className="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Login</Link>
+          <Link href="/planner" className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90">Start Planning</Link>
         </div>
 
         <button
@@ -84,15 +82,10 @@ export function SiteHeader() {
                 {link.label}
               </Link>
             ))}
-            <div className="mt-2 flex flex-col gap-2">
-              <Button variant="outline" className="rounded-full">
-                Login
-              </Button>
-              <Button asChild className="rounded-full">
-                <Link href="/planner" onClick={() => setOpen(false)}>
-                  Start Planning
-                </Link>
-              </Button>
+            <div className="mt-2 flex items-center gap-2">
+              <ThemeToggle />
+              <Link href="/auth" onClick={() => setOpen(false)} className="flex-1 rounded-full border border-border px-4 py-2.5 text-center text-sm font-medium">Login</Link>
+              <Link href="/planner" onClick={() => setOpen(false)} className="rounded-full bg-primary px-4 py-2.5 text-center text-sm font-semibold text-primary-foreground">Start Planning</Link>
             </div>
           </nav>
         </div>
