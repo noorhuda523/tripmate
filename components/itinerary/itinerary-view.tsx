@@ -30,7 +30,7 @@ export function ItineraryView() {
   return (
     <div className="mx-auto w-full max-w-7xl px-5 py-8 sm:px-8">
       {/* Header */}
-      <div className="overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-br from-[#21105b] via-primary to-[#8b35d9] text-primary-foreground shadow-2xl shadow-primary/20">
+      <div className="overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-br from-[#241044] via-[#5B21B6] to-[#8B5CF6] text-primary-foreground shadow-2xl shadow-primary/20">
         <div className="relative">
           <div className="relative h-44 w-full sm:h-52">
             <Image

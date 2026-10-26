@@ -5,7 +5,7 @@ import { CalendarDays, ChevronRight, MapPin, Search, Sparkles, Star, Zap } from 
 
 export function Hero() {
   return (
-    <section className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden bg-[#0d0d2d] text-white">
+    <section className="tm-cinematic-gradient relative isolate min-h-[calc(100svh-4rem)] overflow-hidden text-white">
       <div className="absolute inset-0 -z-20 bg-[url('/images/santorini-sunset.png')] bg-cover bg-[center_right] bg-no-repeat" />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#0b0b2c_0%,rgba(11,11,44,0.97)_27%,rgba(23,17,67,0.72)_55%,rgba(25,12,49,0.2)_100%)]" />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(7,8,31,0.72)_0%,rgba(12,10,45,0.1)_33%,rgba(10,9,40,0.84)_100%)]" />
@@ -38,7 +38,7 @@ export function Hero() {
                 className="w-full bg-transparent text-base text-white outline-none placeholder:text-indigo-200/70"
               />
             </div>
-            <button type="submit" className="inline-flex min-h-14 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-500 px-7 text-base font-bold text-white shadow-lg shadow-fuchsia-950/30 transition-all hover:-translate-y-0.5 hover:from-violet-500 hover:to-fuchsia-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-200">
+            <button type="submit" className="tm-gradient-button inline-flex min-h-14 items-center justify-center gap-2 px-7 text-base font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70">
               Start Planning
               <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </button>
@@ -63,17 +63,17 @@ export function Hero() {
 
       <div className="absolute right-[5%] top-10 hidden animate-in fade-in slide-in-from-right-4 duration-1000 lg:block">
         <div className="rounded-full border border-violet-300/35 bg-[#171442]/75 px-5 py-3 shadow-2xl backdrop-blur-xl">
-          <div className="flex items-center gap-3"><span className="h-2.5 w-2.5 rounded-full bg-emerald-300 shadow-[0_0_12px_#6ee7b7]" /><div><p className="text-xs text-violet-200">5-day itinerary</p><p className="font-semibold">Ready in 12s</p></div><Zap className="h-5 w-5 text-violet-300" /></div>
+          <div className="flex items-center gap-3"><span className="h-2.5 w-2.5 rounded-full bg-[#C4B5FD] shadow-[0_0_12px_#C4B5FD]" /><div><p className="text-xs text-violet-200">5-day itinerary</p><p className="font-semibold">Ready in 12s</p></div><Zap className="h-5 w-5 text-violet-300" /></div>
         </div>
       </div>
 
       <Link href="/planner?destination=Santorini%2C%20Greece" className="absolute bottom-20 right-[5%] hidden rounded-full border border-violet-300/40 bg-[#181542]/80 px-4 py-3 shadow-2xl backdrop-blur-xl transition-all hover:-translate-y-1 hover:border-violet-200 lg:flex lg:items-center lg:gap-3">
-        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-violet-500/80"><MapPin className="h-5 w-5" /></span>
+        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#A78BFA]/80"><MapPin className="h-5 w-5" /></span>
         <span><span className="block text-xs text-violet-200">Next stop</span><span className="font-semibold">Santorini, Greece</span></span>
         <ChevronRight className="ml-4 h-5 w-5 text-violet-300" />
       </Link>
 
-      <div className="pointer-events-none absolute -bottom-1 left-[-5%] h-24 w-[110%] rounded-[50%_50%_0_0] border-t border-violet-500/60 bg-[#101036]/90 shadow-[0_-20px_80px_rgba(85,47,190,0.28)]" />
+      <div className="pointer-events-none absolute -bottom-1 left-[-5%] h-24 w-[110%] rounded-[50%_50%_0_0] border-t border-[#C4B5FD]/60 bg-[#241044]/90 shadow-[0_-20px_80px_rgba(36,16,68,0.35)]" />
     </section>
   )
 }
