@@ -66,7 +66,7 @@ export function TripsBoard() {
           { label: 'Countries', value: stats.countries },
           { label: 'Total budget', value: `$${stats.totalBudget.toLocaleString()}` },
         ].map((stat) => (
-          <div key={stat.label} className="rounded-3xl border border-border bg-card p-6">
+          <div key={stat.label} className="tm-surface p-6">
             <p className="text-sm text-muted-foreground">{stat.label}</p>
             <p className="mt-2 font-display text-3xl font-bold text-foreground">{stat.value}</p>
           </div>
@@ -98,7 +98,7 @@ export function TripsBoard() {
           <Link
             key={trip.id}
             href="/itinerary"
-            className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition-all hover:-translate-y-0.5 hover:shadow-lg sm:flex-row"
+            className="group flex flex-col overflow-hidden tm-surface transition-all hover:-translate-y-0.5 hover:shadow-lg sm:flex-row"
           >
             <div className="relative h-44 w-full shrink-0 sm:h-auto sm:w-40">
               <Image

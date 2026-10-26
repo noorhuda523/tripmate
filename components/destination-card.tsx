@@ -11,7 +11,7 @@ export function DestinationCard({ destination }: { destination: Destination }) {
     <Link
       href={plannerHref}
       aria-label={`Plan a trip to ${destination.name}, ${destination.country}`}
-      className="group block overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+      className="group block overflow-hidden tm-surface shadow-sm transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
     >
       <div className="relative aspect-[4/3] overflow-hidden">
         <Image

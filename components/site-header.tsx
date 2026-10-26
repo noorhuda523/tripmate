@@ -20,7 +20,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-background/85 backdrop-blur-xl dark:border-white/10 dark:bg-[#0d0d2d]/85">
+    <header className="sticky top-0 z-50 border-b border-primary/15 bg-background/80 shadow-[0_10px_40px_-30px_var(--primary)] backdrop-blur-xl dark:bg-[#0c0820]/85">
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-5 sm:px-8">
         <Link href="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">

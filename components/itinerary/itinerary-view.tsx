@@ -30,7 +30,7 @@ export function ItineraryView() {
   return (
     <div className="mx-auto w-full max-w-7xl px-5 py-8 sm:px-8">
       {/* Header */}
-      <div className="overflow-hidden rounded-3xl border border-border bg-primary text-primary-foreground">
+      <div className="overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-br from-[#21105b] via-primary to-[#8b35d9] text-primary-foreground shadow-2xl shadow-primary/20">
         <div className="relative">
           <div className="relative h-44 w-full sm:h-52">
             <Image
@@ -107,7 +107,7 @@ export function ItineraryView() {
           </div>
 
           {/* Day detail */}
-          <article className="mt-5 overflow-hidden rounded-3xl border border-border bg-card">
+          <article className="mt-5 overflow-hidden tm-surface">
             <div className="relative h-48 w-full">
               <Image
                 src={day.image || '/placeholder.svg'}
@@ -168,7 +168,7 @@ export function ItineraryView() {
 
         {/* Right: map + budget */}
         <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
-          <div className="overflow-hidden rounded-3xl border border-border bg-card">
+          <div className="overflow-hidden tm-surface">
             <div className="relative aspect-square w-full">
               <Image
                 src="/images/map-placeholder.png"
@@ -206,7 +206,7 @@ export function ItineraryView() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-border bg-card p-6">
+          <div className="tm-surface p-6">
             <h3 className="flex items-center gap-2 font-display text-lg font-bold text-foreground">
               <Wallet className="h-5 w-5 text-primary" /> Budget estimate
             </h3>

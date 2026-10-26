@@ -41,7 +41,7 @@ export function PlannerForm() {
   return (
     <form onSubmit={handleSubmit} className="mt-8 grid gap-6 lg:grid-cols-[1fr_340px]">
       <div className="space-y-6">
-        <fieldset className="rounded-3xl border border-border bg-card p-6">
+        <fieldset className="tm-surface p-6">
           <legend className="px-2 font-display text-lg font-bold text-foreground">
             Where &amp; when
           </legend>
@@ -76,7 +76,7 @@ export function PlannerForm() {
           </div>
         </fieldset>
 
-        <fieldset className="rounded-3xl border border-border bg-card p-6">
+        <fieldset className="tm-surface p-6">
           <legend className="px-2 font-display text-lg font-bold text-foreground">
             Travelers &amp; budget
           </legend>
@@ -136,7 +136,7 @@ export function PlannerForm() {
           </div>
         </fieldset>
 
-        <fieldset className="rounded-3xl border border-border bg-card p-6">
+        <fieldset className="tm-surface p-6">
           <legend className="px-2 font-display text-lg font-bold text-foreground">
             Travel style
           </legend>
@@ -159,7 +159,7 @@ export function PlannerForm() {
           </div>
         </fieldset>
 
-        <fieldset className="rounded-3xl border border-border bg-card p-6">
+        <fieldset className="tm-surface p-6">
           <legend className="px-2 font-display text-lg font-bold text-foreground">Interests</legend>
           <div className="flex flex-wrap gap-2.5">
             {interestOptions.map((interest) => {
@@ -186,7 +186,7 @@ export function PlannerForm() {
       </div>
 
       <aside className="lg:sticky lg:top-24 lg:self-start">
-        <div className="rounded-3xl border border-border bg-card p-6 shadow-sm">
+        <div className="tm-surface p-6 shadow-sm">
           <h3 className="font-display text-lg font-bold text-foreground">Trip summary</h3>
           <dl className="mt-5 space-y-4 text-sm">
             <div className="flex items-center justify-between gap-4">

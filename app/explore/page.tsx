@@ -21,12 +21,12 @@ export default function ExplorePage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
-        <section className="bg-[radial-gradient(circle_at_top_right,theme(colors.primary/20),transparent_40%),linear-gradient(135deg,theme(colors.card),theme(colors.secondary))] px-5 py-20 sm:px-8">
+        <section className="tm-page-hero px-5 py-20 sm:px-8">
           <div className="mx-auto max-w-7xl">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Explore the world</p>
             <h1 className="mt-4 max-w-3xl font-display text-5xl font-bold tracking-tight sm:text-7xl">Find a place that feels like you.</h1>
             <p className="mt-5 max-w-xl text-lg text-muted-foreground">Browse destination inspiration, then let TripMate shape it into a personal itinerary.</p>
-            <div className="mt-10 flex max-w-2xl flex-col gap-3 rounded-3xl border border-border bg-background/80 p-3 shadow-xl backdrop-blur sm:flex-row">
+            <div className="mt-10 flex max-w-2xl flex-col gap-3 tm-surface p-3 shadow-xl sm:flex-row">
               <div className="flex flex-1 items-center gap-3 px-3"><Search className="h-5 w-5 text-primary" /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search destinations or countries" className="w-full bg-transparent py-3 outline-none" /></div>
               <div className="flex items-center gap-2 overflow-x-auto"><SlidersHorizontal className="ml-2 h-4 w-4 shrink-0 text-muted-foreground" />{categories.map((item) => <button key={item} onClick={() => setCategory(item)} className={`whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition ${category === item ? 'bg-primary text-primary-foreground' : 'bg-secondary text-secondary-foreground hover:bg-primary/15'}`}>{item}</button>)}</div>
             </div>
