@@ -1,4 +1,5 @@
 import { MessageSquareText, Route, BookmarkCheck } from 'lucide-react'
+import { ScrollReveal } from '@/components/scroll-reveal'
 
 const steps = [
   {
@@ -34,10 +35,8 @@ export function HowItWorks() {
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {steps.map((step, i) => (
-            <div
-              key={step.title}
-              className="relative rounded-3xl border border-border bg-background p-7"
-            >
+            <ScrollReveal key={step.title} delay={i * 90}>
+              <div className="relative h-full rounded-3xl border border-border bg-background p-7 transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg">
               <span className="font-display text-sm font-bold text-muted-foreground">
                 0{i + 1}
               </span>
@@ -45,8 +44,9 @@ export function HowItWorks() {
                 <step.icon className="h-6 w-6" />
               </span>
               <h3 className="mt-5 font-display text-xl font-bold text-foreground">{step.title}</h3>
-              <p className="mt-2 leading-relaxed text-muted-foreground text-pretty">{step.detail}</p>
-            </div>
+                <p className="mt-2 leading-relaxed text-muted-foreground text-pretty">{step.detail}</p>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

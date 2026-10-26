@@ -1,5 +1,6 @@
 import { destinations } from '@/lib/data'
 import { DestinationCard } from '@/components/destination-card'
+import { ScrollReveal } from '@/components/scroll-reveal'
 
 export function PopularDestinations() {
   return (
@@ -18,9 +19,11 @@ export function PopularDestinations() {
       </div>
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {destinations.map((destination) => (
-          <DestinationCard key={destination.slug} destination={destination} />
-        ))}
+          {destinations.map((destination, index) => (
+            <ScrollReveal key={destination.slug} delay={index * 70}>
+              <DestinationCard destination={destination} />
+            </ScrollReveal>
+          ))}
       </div>
     </section>
   )

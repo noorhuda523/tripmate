@@ -5,8 +5,14 @@ import type { Destination } from '@/lib/data'
 import { Badge } from '@/components/ui/badge'
 
 export function DestinationCard({ destination }: { destination: Destination }) {
+  const plannerHref = `/planner?destination=${encodeURIComponent(`${destination.name}, ${destination.country}`)}`
+
   return (
-    <article className="group overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl">
+    <Link
+      href={plannerHref}
+      aria-label={`Plan a trip to ${destination.name}, ${destination.country}`}
+      className="group block overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+    >
       <div className="relative aspect-[4/3] overflow-hidden">
         <Image
           src={destination.image || '/placeholder.svg'}
@@ -26,15 +32,12 @@ export function DestinationCard({ destination }: { destination: Destination }) {
           {destination.country}
         </p>
         <div className="mt-4 border-t border-border pt-4">
-          <Link
-            href={`/planner?destination=${encodeURIComponent(`${destination.name}, ${destination.country}`)}`}
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
-          >
+          <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors group-hover:text-primary/80">
             Plan a trip
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-          </Link>
+          </span>
         </div>
       </div>
-    </article>
+    </Link>
   )
 }
